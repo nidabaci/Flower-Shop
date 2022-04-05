@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" id="payment">
+<head>
+  <title>Cart and Payment</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <link rel="stylesheet" href="../assets/css/screen.css" />
+</head>
+<body>
+  <header id="header">
+    <h1 id="shop-name">Simple Succulent Shop</h1>
+    <nav>
+      <ul id="nav-buttons">
+        <li><a class="nav-button" id="home-nav" href="../">Home</a></li>
+        <li><a class="nav-button" id="cart-and-payment-nav" href="">Cart and Payment</a></li>
+        <li><a class="nav-button" id="billing-nav" href="../billing/">Billing</a></li>
+        <li><a class="nav-button" id="shipping-nav" href="../shipping/">Shipping</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <a href="../" class="back-button" id="back-button">Back to Home Page</a>
+
+    <aside id="summary">
+      <section id="items">
+        <h2 class="line">Cart</h2>
+        <ul>
+          <li>Albuca spiralis <p class="price">- $10.49</p></li>
+          <li>Echeveria "Perle von Nurnberg" <p class="price">- $4.99</p></li>
+          <li>Kalanchoe tomentosa "Panda Plant" <p class="price">- $4.99</p></li>
+          <li>Adromischus cristatus "Crinkle-Leaf Plant" <p class="price">- $4.99</p></li>
+          <li>Cereus forbesii monstrose "Ming Thing" <p class="price">- $9.49</p></li>
+          <li>Senecio rowleyanus "String of Pearls" <p class="price">- $4.99</p></li>
+        </ul>
+      </section>
+    </aside>
+
+    <form name="payment" id="form" action="../billing/" method="get" aria-labelledby="form-label" aria-live="polite" aria-relevant="additions">
+      <h1 class="line" id="form-label">Payment</h1>
+
+      <ol>
+        <li>
+          <label for="name-card">Name on Card</label>
+          <input type="text" name="name-card" id="name-card" autocomplete="name" required />
+        </li>
+        <li>
+          <label for="card-number">Card Number</label>
+          <input type="number" name="card-number" id="card-number" required />
+        </li>
+        <li>
+          <label for="expiration">Expiration Date</label>
+          <select name="expiration-month" id="expiration" required>
+            <option value="">MM</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <select name="expiration-year" id="expiration-year" required>
+              <option value="">YY</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+          </select>
+        </li>
+        <li>
+          <label for="cvv">CVV</label>
+          <input type="number" name="cvv" id="cvv" required />
+        </li>
+        <li>
+          <button type="submit" id="submit">To Billing</button>
+        </li>
+      </ol>
+    </form>
+  </main>
+
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

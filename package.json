@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "chromedriver": "^99.0.0",
+    "eslint": "^8.11.0",
+    "geckodriver": "^3.0.1",
+    "nightwatch": "^2.0.10"
+  }
+}

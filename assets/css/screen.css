@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Rubik&display=swap");
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* stylelint-disable*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}html,.linter{line-height:1}body{line-height:inherit}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable */
+
+/* Begin site styles below */
+
+/* Color palette used: https://paletton.com/#uid=32F0u0k7itu2AGw4JxSahqrdFnz */
+
+html {
+  font-family: Merriweather, serif, Rubik, sans-serif;
+  line-height: 1.5625em; /* 25px / 16px = 1.5625em */
+  background: #FFF2EA;
+}
+
+main {
+  padding: 1em; /* 16px = 1em */
+}
+
+section {
+  padding: 1em; /* 16px = 1em */
+}
+
+header {
+  /* font-family: Merriweather, serif; */
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
+  font-weight: bold;
+  line-height: 1.44em; /* 23.04px / 16px = 2.25em */
+  background: #AECC9E;
+  padding: 0.72em; /* 11.52px / 16px */
+}
+
+h1 {
+  font-family: Merriweather, serif;
+  font-size: 2.125em; /* 34px / 16px = 2.125em */
+  line-height: 1em; /* 16px = 1em */
+  padding-top: 0.75em;
+  margin-bottom: 0.75em; /* 12px / 16px = 0.75em */
+}
+
+h2 {
+  font-family: Merriweather, serif;
+  font-size: 2.125em; /* 34px / 16px = 2.125em */
+  line-height: 1em; /* 16px = 1em */
+  padding-top: 0.75em;
+  margin-bottom: 0.75em; /* 12px / 16px = 0.75em */
+}
+
+a {
+  font-family: inherit;
+  text-decoration: none;
+  border-radius: 0.5em; /* 8px / 16px = 0.5em */
+}
+
+ul, select, button {
+  font-family: Rubik, sans-serif;
+  font-size: 1em; /* 16px / 16px = 1em */
+}
+
+button {
+  margin-top: 1.25em; /* 20px / 16px = 1.25em */
+  padding: 0.375em; /* 6px / 16px = 0.375em */;
+}
+
+label {
+  font-family: Rubik, sans-serif;
+  font-size: 1.125em; /* 18px / 16px */
+  padding: 0.375em 0 0.1875em; /* 6px / 16px, 0px / 16px = 0em, 3px / 16px = 0.1875em */
+  display: block;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="tel"] {
+  width: 5.625em; /* 90px / 16px = 5.625em */
+}
+
+input[type="checkbox"], label[for="shipping-is-billing"] {
+  display: inline;
+  vertical-align: middle;
+}
+
+input[name="cvv"] {
+  width: 2.25em; /* 36px / 16px */
+}
+
+input[name="card-number"] {
+  width: 10.25em; /* 164px / 16px = 10.25em */
+}
+
+input[name="billing-zip"], input[name="shipping-zip"] {
+  width: 5.5em; /* 88px / 16px = 4em */
+}
+
+fieldset[aria-hidden="true"] {
+  display: none;
+}
+
+.line {
+  display: block;
+  border-bottom: 0.0625em solid #9E9E9E; /* 1px / 16px = 0.0625em */
+  width: auto;
+}
+
+.nav-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  padding: 0.5em 0.5em; /* 8px / 16px */
+  line-height: 2.625em; /* 42px / 16px = 2.625em */
+  color: initial;
+}
+
+.nav-button:hover {
+  background-color: #76A35E;
+}
+
+.back-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  font-family: Rubik, sans-serif;
+  display: inline-block;
+  padding: 0.625em 0.75em; /* 10px / 16px = 0.625em, 12px / 16px */
+  margin-top: 0.875em; /* 14px / 16px = 0.875em */
+  margin-bottom: 0.875em; /* 14px / 16px */
+  font-size: 1.0625em;  /* 17px / 16px = 1.0625em */
+  text-align: center;
+  color: white;
+  background-color: #A882A1;
+}
+
+.back-button:hover {
+  background-color: #864D7C;
+}
+
+#shop-name {
+  width: min-content;
+  flex-direction: initial;
+}
+
+#nav-buttons {
+  font-family: Merriweather, serif;
+}
+
+/* 500px / 16px = 31.25em */
+@media screen and (min-width: 31.25em) {
+  header {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: [shop-name] auto [home-nav cart-and-payment-nav billing-nav shipping-nav] 11.5em;
+    column-gap: 5em;
+  }
+
+  #shop-name {
+    grid-area: shop-name;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  #home-nav {
+    grid-area: home-nav;
+  }
+
+  #cart-and-payment-nav {
+    grid-area: cart-and-payment-nav;
+  }
+
+  #billing-nav {
+    grid-area: billing-nav;
+  }
+
+  #shipping {
+    grid-area: shipping-nav;
+  }
+
+  .price {
+    display: inline-grid;
+  }
+}
+
+/* 800px / 16px = 50em */
+@media screen and (min-width: 50em) {
+
+  main {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: [back-button-start form-start] auto [back-button-end form-end] auto [summary-start];
+  }
+
+  #nav-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  #home-nav {
+    display: inline-grid;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  #cart-and-payment-nav {
+    display: inline-grid;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  #billing-nav {
+    display: inline-grid;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  #shipping-nav {
+    display: inline-grid;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  #summary {
+    grid-area: summary;
+  }
+
+  #main {
+    grid-area: main;
+  }
+
+  #form {
+    grid-area: form;
+  }
+
+  #back-button {
+    display: inline-grid;
+    grid-area: back-button;
+    grid-row: auto;
+    width: 9.63125em; /* 154.1px / 16px = 9.63125em */
+  }
+}
+
+/* 960px / 16px = 60em */
+@media screen and (min-width: 60em) {
+  header {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: [shop-name] auto [home-nav cart-and-payment-nav billing-nav shipping-nav] auto;
+    column-gap: 5em;
+  }
+}
+
+/* ENDRIS IDEA OF THE DESIGN STARTS HERE */
+
+#hero {
+background-image: url(https://cdn.pixabay.com/photo/2017/01/24/03/53/plant-2004483_960_720.jpg);
+height: 77vh;
+max-width: 100%;
+background-position: top 70% right 0;
+background-size: cover;
+padding: 0 100px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+}
+#hero h1 {
+    color: #76A35E;
+    font-weight: 700;
+}
+#hero button{
+    background-image: url("/assets/images/button.png");
+    background-color: transparent;
+    color: green;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#product-section{
+    text-align: center;
+}
+
+#product-section .product-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+#product-section .products {
+    width: 20%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 15px 15px 20px rgba(179, 169, 91, 0.1);
+    margin: 15px 0px;
+    transition: 0.2s ease;
+    position: relative;
+}
+#product-section .products:hover {
+    box-shadow: 20px 20px 30px rgba(163, 127, 27, 0.2);
+}
+#product-section .products img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product-section .product-desc {
+    text-align: start;
+    padding: 10px 2;
+}
+#product-section .product-desc h5{
+    padding-top: 7px;
+    font-size: 17px;
+}
+#product-section .product-desc h4{
+    padding-top: 7px;
+    color: #76A35E;
+}
+#product-section .products .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 60px;
+    background-color: #DDEAD7;
+    color: #76A35E;
+    position:absolute;
+    bottom: 20px;
+    right: 10px;
+}
+#product-section .products .cart:hover{
+  background-color: #76A35E;
+  color: #DDEAD7;
+}
+
+footer {
+  background-color: #76A35E;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 80px;
+
+}
+footer {
+  padding-top: 30px;
+  
+}
+
+footer .menu {
+  text-align: center;
+}
+footer .menu a{
+ 
+  color: #DDEAD7;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+footer .copyright h5{
+  color: #DDEAD7;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" id="billing">
+<head>
+  <title>Billing</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <link rel="stylesheet" href="../assets/css/screen.css" />
+</head>
+<body>
+  <header id="header">
+    <h1 id="shop-name">Simple Succulent Shop</h1>
+    <nav>
+      <ul id="nav-buttons">
+        <li><a class="nav-button" id="home-nav" href="../">Home</a></li>
+        <li><a class="nav-button" id="cart-and-payment-nav" href="../payment">Cart and Payment</a></li>
+        <li><a class="nav-button" id="billing-nav" href="">Billing</a></li>
+        <li><a class="nav-button" id="shipping-nav" href="../shipping/">Shipping</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <a href="../payment/" class="back-button" id="back-button">Back to Payment</a>
+
+    <aside id="summary">
+      <section>
+        <h2 class="line">Summary</h2>
+        <ul>
+          <li>Item Total: $39.94</li>
+          <li>Tax: $2.40</li>
+          <li>Shipping: $5.00</li>
+          <li>Total: $47.34</li>
+        </ul>
+      </section>
+    </aside>
+
+    <form name="billing" id="form" action="../shipping/" method="get" aria-labelledby="form-label" aria-live="polite" aria-relevant="additions">
+      <h1 class="line" id="form-label">Billing</h1>
+
+      <ol>
+        <li>
+          <label for="billing-name">Name</label>
+          <input type="text" name="billing-name" id="billing-name" autocomplete="name" required />
+        </li>
+        <li>
+          <label for="billing-address">Street Address</label>
+          <input type="text" name="billing-address" id="billing-address" autocomplete="address-line1" required />
+        </li>
+        <li>
+          <label for="billing-address-two">Apartment, Suite, etc. (Optional)</label>
+          <input type="text" name="billing-address-two" id="billing-address-two" />
+        </li>
+        <li>
+          <label for="billing-city">City</label>
+          <input type="text" name="billing-city" id="billing-city" autocomplete="address-level2" required />
+        </li>
+        <li>
+          <label for="billing-state">State</label>
+          <select name="billing-state" id="billing-state" required>
+            <option value="">State</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+        </li>
+        <li>
+          <label for="billing-zip">Zip Code</label>
+          <input type="number" name="billing-zip" id="billing-zip" autocomplete="on" required />
+        </li>
+        <li>
+          <label for="billing-phone">Phone Number</label>
+          <input type="tel" name="billing-phone" id="billing-phone" autocomplete="tel" required />
+        </li>
+        <li>
+          <button type="submit" id="submit">To Shipping</button>
+        </li>
+      </ol>
+    </form>
+  </main>
+
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

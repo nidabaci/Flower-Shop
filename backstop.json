@@ -1,0 +1,184 @@
+{
+  "id": "backstop_default",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 650,
+      "height": 900
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Home Page",
+      "url": "http://localhost:8080/",
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Hover on Header Nav",
+      "url": "http://localhost:8080/",
+      "hoverSelector": "#cart-and-payment-nav",
+      "selectors": "header",
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Empty Payment Form",
+      "url": "http://localhost:8080/payment/",
+      "hoverSelector": "#submit",
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Payment Form with Correct Values",
+      "url": "http://localhost:8080/payment/",
+      "selectors": [
+        "main"
+      ],
+      "keyPressSelectors": [
+        {
+          "selector": "#name-card",
+          "keyPress": "Jane Doe"
+        },
+        {
+          "selector": "#card-number",
+          "keyPress": "378282246310005"
+        },
+        {
+          "selector": "#cvv",
+          "keyPress": "123"
+        }
+      ],
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Payment Form with Incorrect Values",
+      "url": "http://localhost:8080/payment/",
+      "selectors": [
+        "main"
+      ],
+      "keyPressSelectors": [
+        {
+          "selector": "#name-card",
+          "keyPress": "O"
+        },
+        {
+          "selector": "#card-number",
+          "keyPress": "1234567890000000"
+        },
+        {
+          "selector": "#cvv",
+          "keyPress": "0"
+        }
+      ],
+      "clickSelector": "#name-card",
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Empty Billing Form with Hover on Back Button",
+      "url": "http://localhost:8080/billing/",
+      "hoverSelector": "#back-button",
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Billing Form with Correct Values",
+      "url": "http://localhost:8080/billing/",
+      "selectors": [
+        "main"
+      ],
+      "keyPressSelectors": [
+        {
+          "selector": "#billing-name",
+          "keyPress": "Jane Doe"
+        },
+        {
+          "selector": "#billing-address",
+          "keyPress": "123 Seasame Street"
+        },
+        {
+          "selector": "#billing-address-two",
+          "keyPress": "P.O. Box #7"
+        },
+        {
+          "selector": "#billing-city",
+          "keyPress": "New York"
+        },
+        {
+          "selector": "#billing-zip",
+          "keyPress": "10001"
+        },
+        {
+          "selector": "#billing-phone",
+          "keyPress": "2157023566"
+        }
+      ],
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Billing Form with Incorrect Values",
+      "url": "http://localhost:8080/billing/",
+      "selectors": [
+        "main"
+      ],
+      "keyPressSelectors": [
+        {
+          "selector": "#billing-name",
+          "keyPress": "J"
+        },
+        {
+          "selector": "#billing-address",
+          "keyPress": "A"
+        },
+        {
+          "selector": "#billing-zip",
+          "keyPress": "7777777"
+        },
+        {
+          "selector": "#billing-phone",
+          "keyPress": "7"
+        }
+      ],
+      "clickSelector": "#billing-name",
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Empty Shipping Form",
+      "url": "http://localhost:8080/shipping/",
+      "clickSelector": "#shipping-is-billing",
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Shipping Form with the Same Billing Address",
+      "url": "http://localhost:8080/shipping/",
+      "selectors": [
+        "main"
+      ],
+      "misMatchThreshold": 0.1
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

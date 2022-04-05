@@ -1,0 +1,37 @@
+{
+    // Stolley House Config, v. 2.0.0, 20200914
+
+    // names of npm modules to load into htmllint
+    "plugins": [],
+
+    // Configuration options:
+    "attr-bans": ["align", "background", "bgcolor", "border", "frameborder", "longdesc", "marginwidth", "marginheight", "scrolling", "style", "target", "width", "height", "onload", "onclick"], // ban deprecated/obsolete attributes
+    "attr-name-style": "dash", // allow hyphens/dashes in attributes, e.g., for data- attributes
+    "attr-no-dup": true, // no duplicate attributes
+    "attr-validate": true, // well-formed attribute style
+    "class-no-dup": true, // no duplicate classes on same element
+    "doctype-first": true, // <!DOCTYPE html> must be first line
+    "fig-req-figcaption": true, // require <figcaption>
+    "head-req-title": true, // All documents must have <title>
+    "head-valid-content-model": true, // Only valid <head> children
+    "html-req-lang": true, // <html> tag must have lang attribute
+    "html-valid-content-model" : true, // one <head>, one <body>
+    "id-class-no-ad": true, // no class/id names that might trigger an ad blocker
+    "id-class-style": "dash", // require lowercase and hyphens/dashes in attribute values (e.g., week-one)
+    "id-no-dup": true, // no duplicate IDs anywhere on page
+    "img-req-alt": true, // All <img> tags must have non-empty alt attribute
+    "indent-style": "spaces",  // use spaces to indent
+    "indent-width": 2, // use two spaces, to be precise
+    "input-req-label": true, // All <input> tags must have a <label> tag
+    "label-req-for": true, // All <label> tags must have a for attribute
+    "line-end-style": "lf", // Unix-style LF line-endings
+    "line-max-len": 150, // No super-long lines...
+    "line-max-len-ignore-regex": "href", // ...unless they are href values
+    "spec-char-escape": true, // XML special characters (<,>,&,etc.) must be escaped
+    "tag-bans": ["acronym", "big", "blink", "br", "center", "div", "font", "frame", "frameset", "hr", "iframe", "style"],
+    "tag-close": true, // tags that open must close
+    "tag-name-lowercase": true, // only lowercase for tag names
+    "tag-name-match": true, // tag names must match, in both name and case
+    "tag-self-close": "always", // tags like <meta> must self-close: <meta />
+    "title-no-dup": true // only one <title> element in <head>
+}
