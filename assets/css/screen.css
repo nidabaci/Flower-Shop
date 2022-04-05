@@ -264,9 +264,37 @@ fieldset[aria-hidden="true"] {
 }
 
 /* ENDRIS IDEA OF THE DESIGN STARTS HERE */
+#homepage {
+  background-image:url(../images/homepage1.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  font-family: 'Playfair Display';
+	color: #fffdf0;
+}
+
+#homepage button {
+  background-color: #ced1cc5d;
+  border: 1px solid #ffffff;
+  line-height: 24px;
+  padding: 16px 20px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+#homepage a{
+  color: white;
+}
 
 #hero {
-background-image: url(https://cdn.pixabay.com/photo/2017/01/24/03/53/plant-2004483_960_720.jpg);
+background-image: url(../images/hero.jpg);
 height: 77vh;
 max-width: 100%;
 background-position: top 70% right 0;
@@ -356,18 +384,15 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 10px 80px;
-
 }
 footer {
   padding-top: 30px;
-  
 }
 
-footer .menu {
+footer menu {
   text-align: center;
 }
 footer .menu a{
- 
   color: #DDEAD7;
   padding-left: 20px;
   padding-right: 20px;
