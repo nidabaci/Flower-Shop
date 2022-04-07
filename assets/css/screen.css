@@ -265,7 +265,7 @@ fieldset[aria-hidden="true"] {
 
 /* ENDRIS IDEA OF THE DESIGN STARTS HERE */
 #homepage {
-  background-image:url(../images/homepage1.jpg);
+  background-image:url(../images/homepage2.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -383,7 +383,7 @@ footer {
   background-color: #76A35E;
   display: flex;
   justify-content: space-between;
-  padding: 10px 80px;
+  padding: 10px 70px;
 }
 footer {
   padding-top: 30px;
